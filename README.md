@@ -72,7 +72,7 @@
     }
  
 ## Status
-this Project is done but its not hosted in Play store but you can use it if you want in your phone by running it into your phone as  it mentioned above.
+this Project is done except in Play store but you can use it if you want in your phone by running it into your phone as  it mentioned above.
 
 ## Inspiration
 My All Credits goes to Moringa School for the contents which is well explained.
