@@ -1,7 +1,7 @@
 ## Kodesha-App
 ## By Ange Ingabire
 ## Description 
-   this is an Android Application which is included in MarketPlace Category, will help a user to find a house to lent and        contact the houses owner
+   this is an Android Application which is included in MarketPlace Category,which will help a user to find a house to lent and  contact the houses owner
 ## Table of contents
 * [General info](#generalinfo)
 * [Technologies](#technologies)
@@ -17,26 +17,26 @@
 
 
 ## General info
-This project is called Kodesha-APP, 
+   This project is called Kodesha-APP, is an Android application which will allow the user of it to search a house to rent      according to the location he/she prefer to stay. 
 	
 ## Technologies
-Project is created with:
-* javascript 
-* CSS
-* HTML5
+  Project is created with:
+     * Java 
+     * Android
 	
 ## Setup
-To run this project, install it locally using git clone:
-these are some git command you may use
-$ cd ../git init 
-$ git clone https/Imaraika.github/Akan-Name-Project.git
-
+   To run this project,you may have android studio in you machine :
+      - android studio 
+      - install emulator for you to run application or you can use USB to run it to your phone 
+      - then to get all source code locally these are some git command you may use
+   $ cd ../git init 
+   $ git clone https://github.com/Imaraika/Kodesha-App.git
+   
 ## BDD
 ### Behavior
-- Please Enter your Name 
-- Enter your birth date accordingly (the date , mounth and Year)
-- select your Gender
-- then After click On A button to see your Akana name and the day you were born.
+- Please Enter your Location 
+- then click on search button bellow which will direct you to second activity of a long list of houses
+- click on one house item you like to rent then it will direct you at anothe activity wher you will find all details about that house
 ### Input
 - Name
 - Day mounth, year
