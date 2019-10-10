@@ -36,31 +36,46 @@
 ### Behavior
 - Please Enter your Location 
 - then click on search button bellow which will direct you to second activity of a long list of houses
-- click on one house item you like to rent then it will direct you at anothe activity wher you will find all details about that house
+- click on one house item you like to rent then it will direct you at anothe activity where you will get
+  all details about that house
+  
 ### Input
-- Name
-- Day mounth, year
-- Male or Female
-![Example screenshot](./images/inputscreenshot.png)
+- the location 
+
 ### Output
-- Day of birth
-- Akan name 
-![Example screenshot](../Akan/images/outputscreetsht.png) 
+- list of beautiful houses
+- deatails about chosen house
 
 ## Code Examples
- var firstname =documet.getElementById("fname").value;
- var DD =parseFloat(document.getElementById("dd").value);
- var MM =parseFloat(document.getElementById("mm").value);
- var YY =parseFloat(document.getElementById("yy").value);
- var CC =  (YY-1)/100+1;
- var dayOFTheWeek=( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
+    int[] Images = {R.drawable.backgr1, R.drawable.backgr2, R.drawable.kumaziphoto, R.drawable.mostbeautfl, R.drawable.onather1};
+        String[] hsesRoad = new String[]{"707 Kicukiro Ave", "2206 gisz ruhango GD",
+                "2816 Beletoire Ave", "8227 Folcroft kigali ", "9227 lene KK", "2227 nyarugenge Ave",
+                "8227 sake avenue", "8227 Folcroft Lane", "8227 nyabugoogo avenue", "8227 kigali avenue",
+                "1227 sahara avenue", "8227 nyugwe avenue", "8227 ruyenzi avenue",
+                "2422 kamonyi avenue", "8220 nyamata avenue"};
+
+        dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
+        listOfHouses = (ListView) findViewById(R.id.listView);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,hsesRoad);
+        listOfHouses.setAdapter(arrayAdapter);
+        listOfHouses.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String houses = ((TextView) view).getText().toString();
+                Toast.makeText(Houses.this, houses, Toast.LENGTH_SHORT).show();
+            }
+
+        });
+        Intent intent = getIntent();
+        String location = intent.getStringExtra("location");
+        dispLocationText.setText("Houses available at "+ location);
+    }
  
 ## Status
-this Project is done and you can use it if you want 
+this Project is done but its not hosted in Play store but you can use it if you want in your phone by running it into your phone as  it mentioned above.
 
 ## Inspiration
-My All Credits goes to Moringa School Technical Mentors especially Aristote the TM who Always guide us and share with us more and more 
-in Programming. 
+My All Credits goes to Moringa School for the contents which is well explained.
 
 ## Contact
 created By inange2013@gmail.com feel free to contact me!
