@@ -26,6 +26,7 @@ public class Houses extends AppCompatActivity {
         ButterKnife.bind(this);
 
         int[] Images = {R.drawable.backgr1, R.drawable.backgr2, R.drawable.kumaziphoto, R.drawable.mostbeautfl, R.drawable.onather1};
+
         String[] hsesRoad = new String[]{"707 Kicukiro Ave", "2206 gisz ruhango GD",
                 "2816 Beletoire Ave", "8227 Folcroft kigali ", "9227 lene KK", "2227 nyarugenge Ave",
                 "8227 sake avenue", "8227 Folcroft Lane", "8227 nyabugoogo avenue", "8227 kigali avenue",

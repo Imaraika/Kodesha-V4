@@ -7,34 +7,27 @@
     tools:context=".MainActivity">
 
 
-
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="265dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
-        app:srcCompat="@drawable/kodeshapngpic" />
+        android:scaleType="fitStart"
+        android:src="@drawable/backorg" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="158dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="190dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/locationEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="53dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="100dp"
-            android:ems="10"
-            android:hint="Enter your Location"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_above="@+id/buttonfindhouse"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="255dp"
+        android:ems="10"
+        android:hint="Enter your Location"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/buttonfindhouse"
