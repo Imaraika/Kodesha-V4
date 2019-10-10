@@ -26,15 +26,15 @@ public class Houses extends AppCompatActivity {
         ButterKnife.bind(this);
 
         int[] Images = {R.drawable.backgr1, R.drawable.backgr2, R.drawable.kumaziphoto, R.drawable.mostbeautfl, R.drawable.onather1};
-        String[] hsesRoad = new String[]{"Mi Mero Mole", "Mother's Bistro",
-                "Life of Pie", "Screen Door", "Luc Lac", "Sweet Basil",
-                "Slappy Cakes", "Equinox", "Miss Delta's", "Andina",
-                "Lardo", "Portland City Grill", "Fat Head's Brewery",
-                "Chipotle", "Subway"};
+        String[] hsesRoad = new String[]{"707 Kicukiro Ave", "2206 gisz ruhango GD",
+                "2816 Beletoire Ave", "8227 Folcroft kigali ", "9227 lene KK", "2227 nyarugenge Ave",
+                "8227 sake avenue", "8227 Folcroft Lane", "8227 nyabugoogo avenue", "8227 kigali avenue",
+                "1227 sahara avenue", "8227 nyugwe avenue", "8227 ruyenzi avenue",
+                "2422 kamonyi avenue", "8220 nyamata avenue"};
 
         dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
         listOfHouses = (ListView) findViewById(R.id.listView);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,hses);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,hsesRoad);
         listOfHouses.setAdapter(arrayAdapter);
         listOfHouses.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
