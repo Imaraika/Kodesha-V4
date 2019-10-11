@@ -20,7 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Houses extends AppCompatActivity {
-    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr2, R.drawable.kumaziphoto, R.drawable.mostbeautfl, R.drawable.onather1};
+    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr2 (1), R.drawable.backgr2, R.drawable.backgr2, R.drawable.backgr2};
 
     String[] hsesRoad = {"707 Kicukiro Ave", "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 lene KK"};
 
@@ -84,13 +84,13 @@ public class Houses extends AppCompatActivity {
          public View getView(int i, View convertView, ViewGroup parent) {
              convertView = getLayoutInflater().inflate(R.layout.customlayout,null);
 
-             ImageView img = (ImageView)findViewById(R.id.imageViewoflist);
-             TextView textView_Road = (TextView)findViewById(R.id.textView_Road);
-             TextView textView_descr = (TextView)findViewById(R.id.textView_descrp);
-//             img.setImageResource(IMAGES[i]);
+             ImageView img = (ImageView)convertView.findViewById(R.id.imageViewoflist);
+             TextView textView_Road = (TextView)convertView.findViewById(R.id.textView_Road);
+             TextView textView_descr = (TextView)convertView.findViewById(R.id.textView_descrp);
+             img.setImageResource(IMAGES[i]);
 
 //             iimm.setImageResource(IMAGES[i]);
-//             textView_Road.setText(hsesRoad[i]);
+             textView_Road.setText(hsesRoad[i]);
 //             textView_descr.setText(hsesRoad[i]);
 
              return convertView;

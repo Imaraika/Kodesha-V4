@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                String chosenLotion = mainLocationEditText.getText().toString();
 
-                Intent houseIntent = new Intent(MainActivity.this,CustomListViewActivity.class);
+                Intent houseIntent = new Intent(MainActivity.this,Houses.class);
 //                houseIntent.putExtra("location",chosenLotion);
                 startActivity(houseIntent);
 
