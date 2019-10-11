@@ -3,10 +3,15 @@ package com.example.kodesha;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,9 +20,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Houses extends AppCompatActivity {
+    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr2, R.drawable.kumaziphoto, R.drawable.mostbeautfl, R.drawable.onather1};
+
+    String[] hsesRoad = {"707 Kicukiro Ave", "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 lene KK"};
+
+
 
     @BindView(R.id.listView) ListView listOfHouses;
     @BindView(R.id.display_Location_TextView) TextView dispLocationText;
+//    @BindView(R.id.imageViewoflist) ImageView img;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,18 +37,18 @@ public class Houses extends AppCompatActivity {
         setContentView(R.layout.activity_houses);
         ButterKnife.bind(this);
 
-        int[] Images = {R.drawable.backgr1, R.drawable.backgr2, R.drawable.kumaziphoto, R.drawable.mostbeautfl, R.drawable.onather1};
 
-        String[] hsesRoad = new String[]{"707 Kicukiro Ave", "2206 gisz ruhango GD",
-                "2816 Beletoire Ave", "8227 Folcroft kigali ", "9227 lene KK", "2227 nyarugenge Ave",
-                "8227 sake avenue", "8227 Folcroft Lane", "8227 nyabugoogo avenue", "8227 kigali avenue",
-                "1227 sahara avenue", "8227 nyugwe avenue", "8227 ruyenzi avenue",
-                "2422 kamonyi avenue", "8220 nyamata avenue"};
-
+//        img = (ImageView) findViewById(R.id.imageViewoflist) ;
         dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
         listOfHouses = (ListView) findViewById(R.id.listView);
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,hsesRoad);
-        listOfHouses.setAdapter(arrayAdapter);
+
+
+        CustomerAdapter customerAdapter = new CustomerAdapter();
+        listOfHouses.setAdapter(customerAdapter);
+
+//        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, hsesRoad);
+//        listOfHouses.setAdapter(arrayAdapter);
+
         listOfHouses.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -47,6 +59,41 @@ public class Houses extends AppCompatActivity {
         });
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        dispLocationText.setText("Houses available at "+ location);
+        dispLocationText.setText("Houses available at " + location);
+
     }
+
+     class CustomerAdapter extends BaseAdapter{
+
+         @Override
+         public int getCount() {
+          return IMAGES.length;
+         }
+
+         @Override
+         public Object getItem(int position) {
+             return null;
+         }
+
+         @Override
+         public long getItemId(int position) {
+             return 0;
+         }
+
+         @Override
+         public View getView(int i, View convertView, ViewGroup parent) {
+             convertView = getLayoutInflater().inflate(R.layout.customlayout,null);
+
+             ImageView img = (ImageView)findViewById(R.id.imageViewoflist);
+             TextView textView_Road = (TextView)findViewById(R.id.textView_Road);
+             TextView textView_descr = (TextView)findViewById(R.id.textView_descrp);
+//             img.setImageResource(IMAGES[i]);
+
+//             iimm.setImageResource(IMAGES[i]);
+//             textView_Road.setText(hsesRoad[i]);
+//             textView_descr.setText(hsesRoad[i]);
+
+             return convertView;
+         }
+     }
 }
