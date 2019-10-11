@@ -20,7 +20,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Houses extends AppCompatActivity {
-    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr2 (1), R.drawable.backgr2, R.drawable.backgr2, R.drawable.backgr2};
+    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1};
 
     String[] hsesRoad = {"707 Kicukiro Ave", "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 lene KK"};
 
