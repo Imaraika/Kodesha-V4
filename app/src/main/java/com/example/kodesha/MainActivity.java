@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                String chosenLotion = mainLocationEditText.getText().toString();
+                String chosenLotion = mainLocationEditText.getText().toString();
 
                 Intent houseIntent = new Intent(MainActivity.this,Houses.class);
-//                houseIntent.putExtra("location",chosenLotion);
+                houseIntent.putExtra("location",chosenLotion);
                 startActivity(houseIntent);
 
 
