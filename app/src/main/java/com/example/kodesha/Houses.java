@@ -48,8 +48,6 @@ public class Houses extends AppCompatActivity {
         CustomerAdapter customerAdapter = new CustomerAdapter();
         listOfHouses.setAdapter(customerAdapter);
 
-//        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, hsesRoad);
-//        listOfHouses.setAdapter(arrayAdapter);
 
         listOfHouses.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
