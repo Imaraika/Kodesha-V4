@@ -4,13 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListdataActivity">
+    tools:context=".ListdataActivity"
+    android:background="@color/colorAccent">
 
     <ImageView
-    android:id="@+id/imageViewdetail"
-    android:layout_width="60dp"
-    android:layout_height="60dp"
-    app:srcCompat="@mipmap/ic_launcher_round" />
+        android:id="@+id/imageViewdetail"
+        android:layout_width="359dp"
+        android:layout_height="280dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/listdata"
@@ -20,9 +27,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginTop="558dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginRight="146dp"
         android:fontFamily="@font/rock_salt"
         android:text="TextView"
         android:textSize="25dp"
