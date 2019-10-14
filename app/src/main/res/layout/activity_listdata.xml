@@ -27,11 +27,42 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="558dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginRight="146dp"
+        android:layout_marginTop="478dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
         android:fontFamily="@font/rock_salt"
         android:text="TextView"
         android:textSize="25dp"
         app:fontFamily="@font/rock_salt" />
+
+    <TextView
+        android:id="@+id/listprice"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listdata"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:fontFamily="@font/rock_salt"
+        android:text="2000$"
+        android:textSize="25dp"
+        app:fontFamily="@font/rock_salt" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="675dp"
+        android:background="#2196F3"
+        android:text="BUY" />
+
+
 </RelativeLayout>
