@@ -20,7 +20,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class Houses extends AppCompatActivity {
-    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1};
+    int[] IMAGES = {R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1,
+            R.drawable.mostbeautfl,R.drawable.kumaziphoto, R.drawable.kodeshapngpic, R.drawable.backgr1, R.drawable.backgr1, R.drawable.backgr1};
 
     String[] hsesRoad = {"707 Kicukiro Ave", "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 lene KK"};
 
@@ -53,7 +54,12 @@ public class Houses extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String houses = ((TextView) view).getText().toString();
-                Toast.makeText(Houses.this, houses, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Houses.this, houses, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),ListdataActivity.class);
+                intent.putExtra("image",IMAGES[position]);
+                intent.putExtra("name",hsesRoad[position]);
+                startActivity(intent);
+
             }
 
         });
