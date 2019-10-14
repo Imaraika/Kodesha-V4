@@ -7,21 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".ListdataActivity">
 
-    <imageview android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/apple"
-        android:layout_centerhorizontal="true"
-        android:layout_margintop="27dp"/>
+    <ImageView
+    android:id="@+id/imageViewoflist"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    app:srcCompat="@mipmap/ic_launcher_round" />
 
-    <textview
-        android:id="@+id/listdata"
+    <TextView
+        android:textSize="25dp"
+        android:id="@+id/textView_Road"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerhorizontal="true"
-        android:layout_margintop="105dp"
-        android:text="GAcuriro Rd state"
-        android:textcolor="#000"
-        android:textsize="30dp" />
-
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/imageViewoflist"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:text="TextView" />
 </RelativeLayout>
