@@ -49,7 +49,7 @@ public class CustomListViewActivity extends AppCompatActivity {
 
             ImageView imageViewoflist = (ImageView)convertView.findViewById(R.id.imageViewoflist);
             TextView textView_Road = (TextView)convertView.findViewById(R.id.textView_Road);
-            TextView textView_descr = (TextView)convertView.findViewById(R.id.textView_descrp);
+//            TextView textView_descr = (TextView)convertView.findViewById(R.id.textView_descrp);
 
 //
             imageViewoflist.setImageResource(IMAGES[position]);

@@ -92,7 +92,7 @@ public class Houses extends AppCompatActivity {
 
              ImageView img = (ImageView)convertView.findViewById(R.id.imageViewoflist);
              TextView textView_Road = (TextView)convertView.findViewById(R.id.textView_Road);
-             TextView textView_descr = (TextView)convertView.findViewById(R.id.textView_descrp);
+//             TextView textView_descr = (TextView)convertView.findViewById(R.id.textView_descrp);
              img.setImageResource(IMAGES[i]);
 
 //             iimm.setImageResource(IMAGES[i]);
