@@ -28,8 +28,7 @@ public class ListdataActivity extends AppCompatActivity {
         listdata.setText(receivedName);
         detailimageView.setImageResource(receivedImage);
         //enable back Button
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
+     }
     //getting back to listview
 
     @Override
