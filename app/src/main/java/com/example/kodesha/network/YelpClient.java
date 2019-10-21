@@ -1,4 +1,4 @@
-package com.example.kodesha;
+package com.example.kodesha.network;
 
 import java.io.IOException;
 

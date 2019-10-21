@@ -1,6 +1,6 @@
-package com.example.kodesha;
+package com.example.kodesha.network;
 
-import com.example.kodesha.YelpBusinessRenting;
+import com.example.kodesha.models.YelpBusinessRenting;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

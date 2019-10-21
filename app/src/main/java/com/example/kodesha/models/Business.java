@@ -1,11 +1,8 @@
 
-package com.example.kodesha;
+package com.example.kodesha.models;
 
 import java.util.List;
 
-import com.example.kodesha.Category;
-import com.example.kodesha.Coordinates;
-import com.example.Location;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
