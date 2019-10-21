@@ -1,7 +1,8 @@
 ## Kodesha-App
 ## By Ange Ingabire
 ## Description 
-   this is an Android Application which is included in MarketPlace Category,which will help a user to find a house to lent and  contact the houses owner
+   this is an a continued Android Application of Last week where i have added an API to get information from elsewhere
+   the project was about to display the List of Houses and some information about those renting houses
 ## Table of contents
 * [General info](#generalinfo)
 * [Technologies](#technologies)
