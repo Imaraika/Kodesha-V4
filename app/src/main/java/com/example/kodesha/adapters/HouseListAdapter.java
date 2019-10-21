@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.kodesha.R;
 import com.example.kodesha.models.Business;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Target;
 
 import java.util.List;
 
@@ -21,10 +23,34 @@ import butterknife.ButterKnife;
 public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.HouseViewHolder> {
     private List<Business> mHouses;
     private Context mContext;
+    private String[] house;
+//    private Target mHouseImageView;
 
-    public HouseListAdapter(Context context, List<Business> restaurants) {
+    public HouseListAdapter(Context context, List<Business> houses) {
         mContext = context;
-        mHouses = restaurants;
+        mHouses = houses;
+//        house = house;
+    }
+
+    public class HouseViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.houseImageView) ImageView mHouseImageView;
+        @BindView(R.id.restaurantNameTextView) TextView mNameTextView;
+        @BindView(R.id.categoryTextView) TextView mCategoryTextView;
+        @BindView(R.id.price) TextView mRatingTextView;
+
+        private Context mContext;
+
+        public HouseViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+            mContext = itemView.getContext();
+        }
+
+        public void bindHouse(Business house) {
+            mNameTextView.setText(house.getName());
+            mCategoryTextView.setText(house.getCategories().get(0).getTitle());
+            mRatingTextView.setText("Rating: " + house.getRating() + "/5");
+        }
     }
 
     @NonNull
@@ -37,7 +63,11 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
 
     @Override
     public void onBindViewHolder(@NonNull HouseViewHolder holder, int position) {
-        holder.bindRestaurant(mHouses.get(position));
+        Picasso.get().load(house[position]).into(mHouseImageView);
+        holder.bindHouse(mHouses.get(position));
+
+
+//        Picasso.get().load(house.getImageUrl()).into(mHouseImageView);
 
 
     }
@@ -47,26 +77,5 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
         return mHouses.size();
     }
 
-    public class HouseViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.restaurantImageView)
-        ImageView mRestaurantImageView;
-        @BindView(R.id.restaurantNameTextView)
-        TextView mNameTextView;
-        @BindView(R.id.categoryTextView) TextView mCategoryTextView;
-        @BindView(R.id.price) TextView mRatingTextView;
 
-        private Context mContext;
-
-        public HouseViewHolder(View itemView) {
-            super(itemView);
-            ButterKnife.bind(this, itemView);
-            mContext = itemView.getContext();
-        }
-
-        public void bindRestaurant(Business restaurant) {
-            mNameTextView.setText(restaurant.getName());
-            mCategoryTextView.setText(restaurant.getCategories().get(0).getTitle());
-            mRatingTextView.setText("Rating: " + restaurant.getRating() + "/5");
-        }
-    }
 }

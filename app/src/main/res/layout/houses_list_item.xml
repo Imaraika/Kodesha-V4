@@ -7,7 +7,7 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:id="@+id/restaurantImageView"
+        android:id="@+id/houseImageView"
         android:src="@drawable/backgr2"
         android:scaleType="centerCrop"/>
 
