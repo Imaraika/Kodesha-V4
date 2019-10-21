@@ -1,7 +1,11 @@
 
-package com.example;
+package com.example.kodesha;
 
 import java.util.List;
+
+import com.example.kodesha.Category;
+import com.example.kodesha.Coordinates;
+import com.example.Location;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -33,7 +37,7 @@ public class Business {
     private List<Category> categories = null;
     @SerializedName("rating")
     @Expose
-    private Integer rating;
+    private Double rating;
     @SerializedName("coordinates")
     @Expose
     private Coordinates coordinates;
@@ -78,7 +82,7 @@ public class Business {
      * @param isClosed
      * @param coordinates
      */
-    public Business(String id, String alias, String name, String imageUrl, Boolean isClosed, String url, Integer reviewCount, List<Category> categories, Integer rating, Coordinates coordinates, List<Object> transactions, Location location, String phone, String displayPhone, Double distance) {
+    public Business(String id, String alias, String name, String imageUrl, Boolean isClosed, String url, Integer reviewCount, List<Category> categories, Double rating, Coordinates coordinates, List<Object> transactions, Location location, String phone, String displayPhone, Double distance) {
         super();
         this.id = id;
         this.alias = alias;
@@ -161,11 +165,11 @@ public class Business {
         this.categories = categories;
     }
 
-    public Integer getRating() {
+    public Double getRating() {
         return rating;
     }
 
-    public void setRating(Integer rating) {
+    public void setRating(Double rating) {
         this.rating = rating;
     }
 

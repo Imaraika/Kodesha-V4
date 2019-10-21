@@ -25,6 +25,7 @@ public class YelpClient {
                             Request newRequest  = chain.request().newBuilder()
                                     .addHeader("Authorization", YELP_API_KEY)
                                     .build();
+
                             return chain.proceed(newRequest);
                         }
                     })

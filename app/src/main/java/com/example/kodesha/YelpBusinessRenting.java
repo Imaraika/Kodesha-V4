@@ -1,7 +1,9 @@
 
-package com.example;
+package com.example.kodesha;
 
 import java.util.List;
+
+import com.example.Region;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
