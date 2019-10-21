@@ -1,6 +1,8 @@
 package com.example.kodesha;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kodesha.adapters.HouseListAdapter;
 import com.example.kodesha.models.Business;
 import com.example.kodesha.models.Category;
 import com.example.kodesha.models.YelpBusinessRenting;
@@ -29,12 +32,12 @@ import retrofit2.Response;
 public class Houses extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    @BindView(R.id.listView)
-    ListView listOfHouses;
-    @BindView(R.id.display_Location_TextView)
-    TextView dispLocationText;
-    @BindView(R.id.errorTextView)
-    TextView mErrorTextView;
+    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+    private HouseListAdapter mAdapter;
+
+    @BindView(R.id.errorTextView) TextView mErrorTextView;
+
+    public List<Business> houses;
 
 
     @Override
@@ -43,16 +46,10 @@ public class Houses extends AppCompatActivity {
         setContentView(R.layout.activity_houses);
         ButterKnife.bind(this);
 
+
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        listOfHouses.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String houses = ((TextView) view).getText().toString();
-                Toast.makeText(Houses.this, houses, Toast.LENGTH_LONG).show();
-            }
-        });
-        dispLocationText.setText("Here are all the restaurants near: " + location);
+
 
                  //integrate API
 
@@ -64,23 +61,13 @@ public class Houses extends AppCompatActivity {
             public void onResponse(Call<YelpBusinessRenting> call, Response<YelpBusinessRenting> response) {
 
                 if (response.isSuccessful()) {
-                    List<Business> HousesList = response.body().getBusinesses();
-                    String[] houses = new String[HousesList.size()];
-                    String[] categories = new String[HousesList.size()];
-
-                    for (int i = 0; i < houses.length; i++) {
-                        houses[i] = HousesList.get(i).getName();
-                    }
-
-                    for (int i = 0; i < categories.length; i++) {
-                        Category category = HousesList.get(i).getCategories().get(0);
-                        categories[i] = category.getTitle();
-                    }
-
-                    ArrayAdapter adapter
-                            = new MyHousesArrayAdapter(Houses.this, android.R.layout.simple_list_item_1, houses, categories);
-                    listOfHouses.setAdapter(adapter);
-
+                    houses = response.body().getBusinesses();
+                    mAdapter = new HouseListAdapter(Houses.this, houses);
+                    mRecyclerView.setAdapter(mAdapter);
+                    RecyclerView.LayoutManager layoutManager =
+                            new LinearLayoutManager(Houses.this);
+                    mRecyclerView.setLayoutManager(layoutManager);
+                    mRecyclerView.setHasFixedSize(true);
 
                     showHouses();
                 } else {
@@ -109,7 +96,6 @@ public class Houses extends AppCompatActivity {
     }
 
     private void showHouses() {
-        listOfHouses.setVisibility(View.VISIBLE);
-        dispLocationText.setVisibility(View.VISIBLE);
+        mRecyclerView.setVisibility(View.VISIBLE);
     }
 }
