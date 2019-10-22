@@ -41,11 +41,13 @@
   all details about that house
   
 ### Input
-- the location 
+- the location
 
 ### Output
 - list of beautiful houses
 - deatails about chosen house
+- the user should call the owner of the house you want to rent 
+- the user shoul open the map to see the location 
 
 ## Code Examples
 
@@ -108,7 +110,7 @@ My All Credits goes to Moringa School for the contents which is well explained.
 created By inange2013@gmail.com feel free to contact me!
 
 ## Licence
-Copyright 2019 Ange Ingabire
-you may not use this file except in compliance with the License.
+Copyright 2019 Ange Ingabire.
+
 
 
