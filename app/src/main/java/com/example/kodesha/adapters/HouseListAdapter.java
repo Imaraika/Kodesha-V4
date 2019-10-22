@@ -47,6 +47,8 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
         }
 
         public void bindHouse(Business house) {
+            Picasso.get().load(house.getImageUrl()).into(mHouseImageView);
+
             mNameTextView.setText(house.getName());
             mCategoryTextView.setText(house.getCategories().get(0).getTitle());
             mRatingTextView.setText("Rating: " + house.getRating() + "/5");
@@ -63,7 +65,7 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
 
     @Override
     public void onBindViewHolder(@NonNull HouseViewHolder holder, int position) {
-        Picasso.get().load(house[position]).into(mHouseImageView);
+//        Picasso.get().load(house[position]).into(mHouseImageView);
         holder.bindHouse(mHouses.get(position));
 
 
