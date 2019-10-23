@@ -1,6 +1,8 @@
 package com.example.kodesha;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -27,7 +29,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RestaurantDetailFragment extends Fragment {
+public class RestaurantDetailFragment extends Fragment implements View.OnClickListener {
     @BindView(R.id.restaurantImageView)
     ImageView mImageLabel;
     @BindView(R.id.restaurantNameTextView)
@@ -71,11 +73,17 @@ public class RestaurantDetailFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_restaurant_detail, container, false);
         ButterKnife.bind(this, view);
 
+
         Picasso.get().load(mRestaurant.getImageUrl()).into(mImageLabel);
         List<String> categories = new ArrayList<>();
 
         for (Category category : mRestaurant.getCategories()) {
             categories.add(category.getTitle());
+
+            mWebsiteLabel.setOnClickListener(this);
+            mPhoneLabel.setOnClickListener(this);
+            mAddressLabel.setOnClickListener(this);
+            return view;
         }
 
         mNameLabel.setText(mRestaurant.getName());
@@ -85,5 +93,27 @@ public class RestaurantDetailFragment extends Fragment {
         mAddressLabel.setText(mRestaurant.getLocation().toString());
 
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == mWebsiteLabel) {
+            Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(mRestaurant.getUrl()));
+            startActivity(webIntent);
+        }
+        if (v == mPhoneLabel) {
+            Intent phoneIntent = new Intent(Intent.ACTION_DIAL,
+                    Uri.parse("tel:" + mRestaurant.getPhone()));
+            startActivity(phoneIntent);
+        }
+        if (v == mAddressLabel) {
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("geo:" + mRestaurant.getCoordinates().getLatitude()
+                            + "," + mRestaurant.getCoordinates().getLongitude()
+                            + "?q=(" + mRestaurant.getName() + ")"));
+            startActivity(mapIntent);
+        }
+
     }
 }
