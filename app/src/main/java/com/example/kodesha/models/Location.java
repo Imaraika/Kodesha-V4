@@ -5,6 +5,9 @@ import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.parceler.Parcel;
+
+@Parcel
 public class Location {
 
     @SerializedName("address1")
@@ -12,7 +15,7 @@ public class Location {
     private String address1;
     @SerializedName("address2")
     @Expose
-    private Object address2;
+    private String address2;
     @SerializedName("address3")
     @Expose
     private String address3;
@@ -34,13 +37,11 @@ public class Location {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Location() {
     }
 
     /**
-     * 
      * @param displayAddress
      * @param zipCode
      * @param state
@@ -50,7 +51,7 @@ public class Location {
      * @param country
      * @param city
      */
-    public Location(String address1, Object address2, String address3, String city, String zipCode, String country, String state, List<String> displayAddress) {
+    public Location(String address1, String address2, String address3, String city, String zipCode, String country, String state, List<String> displayAddress) {
         super();
         this.address1 = address1;
         this.address2 = address2;
@@ -74,7 +75,7 @@ public class Location {
         return address2;
     }
 
-    public void setAddress2(Object address2) {
+    public void setAddress2(String address2) {
         this.address2 = address2;
     }
 
@@ -126,4 +127,9 @@ public class Location {
         this.displayAddress = displayAddress;
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s, %s, %s %s", this.address1, this.city, this.state, this.zipCode);
+
+    }
 }
