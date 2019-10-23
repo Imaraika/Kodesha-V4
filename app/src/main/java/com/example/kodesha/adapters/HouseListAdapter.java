@@ -11,11 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.kodesha.HouseDetailActivity;
 import com.example.kodesha.R;
-import com.example.kodesha.RestaurantDetailActivity;
 import com.example.kodesha.models.Business;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import org.parceler.Parcels;
 
@@ -74,7 +73,7 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
         @Override
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, RestaurantDetailActivity.class);
+            Intent intent = new Intent(mContext, HouseDetailActivity.class);
             intent.putExtra("position", itemPosition);
             intent.putExtra("restaurants", Parcels.wrap(mHouses));
             mContext.startActivity(intent);

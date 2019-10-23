@@ -13,13 +13,13 @@ public class YelpBusinessRenting {
 
     @SerializedName("businesses")
     @Expose
-    private List<Business> businesses = null;
+    public List<Business> businesses = null;
     @SerializedName("total")
     @Expose
-    private Integer total;
+    public Integer total;
     @SerializedName("region")
     @Expose
-    private Region region;
+    public Region region;
 
     /**
      * No args constructor for use in serialization

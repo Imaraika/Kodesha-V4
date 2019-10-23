@@ -11,10 +11,10 @@ public class Center {
 
     @SerializedName("longitude")
     @Expose
-    private Double longitude;
+    public Double longitude;
     @SerializedName("latitude")
     @Expose
-    private Double latitude;
+    public Double latitude;
 
     /**
      * No args constructor for use in serialization

@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Restaurant Name"
+                android:text="House Name"
                 android:id="@+id/restaurantNameTextView"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4.5/5"
+
                 android:id="@+id/ratingTextView"
                 android:layout_alignTop="@+id/restaurantNameTextView"
                 android:layout_alignParentRight="true"

@@ -12,28 +12,28 @@ public class Location {
 
     @SerializedName("address1")
     @Expose
-    private String address1;
+    public String address1;
     @SerializedName("address2")
     @Expose
-    private String address2;
+    public String address2;
     @SerializedName("address3")
     @Expose
-    private String address3;
+    public String address3;
     @SerializedName("city")
     @Expose
-    private String city;
+    public String city;
     @SerializedName("zip_code")
     @Expose
-    private String zipCode;
+    public String zipCode;
     @SerializedName("country")
     @Expose
-    private String country;
+    public String country;
     @SerializedName("state")
     @Expose
-    private String state;
+    public String state;
     @SerializedName("display_address")
     @Expose
-    private List<String> displayAddress = null;
+    public List<String> displayAddress = null;
 
     /**
      * No args constructor for use in serialization
