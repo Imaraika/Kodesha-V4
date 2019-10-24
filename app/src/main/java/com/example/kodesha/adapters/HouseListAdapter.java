@@ -75,7 +75,7 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
             int itemPosition = getLayoutPosition();
             Intent intent = new Intent(mContext, HouseDetailActivity.class);
             intent.putExtra("position", itemPosition);
-            intent.putExtra("restaurants", Parcels.wrap(mHouses));
+            intent.putExtra("houses", Parcels.wrap(mHouses));
             mContext.startActivity(intent);
         }
     }

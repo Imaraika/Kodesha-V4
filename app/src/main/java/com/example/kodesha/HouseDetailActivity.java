@@ -5,7 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
-import com.example.kodesha.adapters.RestaurantPagerAdapter;
+import com.example.kodesha.adapters.HousePagerAdapter;
 import com.example.kodesha.models.Business;
 
 import org.parceler.Parcels;
@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 public class HouseDetailActivity extends AppCompatActivity {
     @BindView(R.id.viewPager)
     ViewPager mViewPager;
-    private RestaurantPagerAdapter adapterViewPager;
+    private HousePagerAdapter adapterViewPager;
     List<Business> mHouse;
 
     @Override
@@ -27,10 +27,10 @@ public class HouseDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_house_detail);
         ButterKnife.bind(this);
 
-        mHouse = Parcels.unwrap(getIntent().getParcelableExtra("restaurants"));
+        mHouse = Parcels.unwrap(getIntent().getParcelableExtra("houses"));
         int startingPosition = getIntent().getIntExtra("position", 0);
 
-        adapterViewPager = new RestaurantPagerAdapter(getSupportFragmentManager(),mHouse);
+        adapterViewPager = new HousePagerAdapter(getSupportFragmentManager(),mHouse);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);
     }

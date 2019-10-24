@@ -29,55 +29,54 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RestaurantDetailFragment extends Fragment implements View.OnClickListener {
-    @BindView(R.id.restaurantImageView)
+public class HouseDetailFragment extends Fragment  implements View.OnClickListener {
+    @BindView(R.id.houseImageView)
     ImageView mImageLabel;
-    @BindView(R.id.restaurantNameTextView)
+    @BindView(R.id.houseNameTextView)
     TextView mNameLabel;
-    @BindView(R.id.cuisineTextView)
+    @BindView(R.id.categTextView)
     TextView mCategoriesLabel;
-    @BindView(R.id.ratingTextView)
-    TextView mRatingLabel;
+
     @BindView(R.id.websiteTextView)
     TextView mWebsiteLabel;
     @BindView(R.id.phoneTextView)
     TextView mPhoneLabel;
     @BindView(R.id.addressTextView)
     TextView mAddressLabel;
-    @BindView(R.id.saveRestaurantButton)
-    TextView mSaveRestaurantButton;
+    @BindView(R.id.savehouseButton)
+    TextView mSavehouseButton;
 
-    private Business mRestaurant;
+    private Business mHouse;
 
-    public RestaurantDetailFragment() {
+    public HouseDetailFragment() {
         // Required empty public constructor
     }
 
-    public static RestaurantDetailFragment newInstance(Business restaurant) {
-        RestaurantDetailFragment restaurantDetailFragment = new RestaurantDetailFragment();
+    public static HouseDetailFragment newInstance(Business house) {
+        HouseDetailFragment houseDetailFragment = new HouseDetailFragment();
         Bundle args = new Bundle();
-        args.putParcelable("restaurant", Parcels.wrap(restaurant));
-        restaurantDetailFragment.setArguments(args);
-        return restaurantDetailFragment;
+        args.putParcelable("house", Parcels.wrap(house));
+       houseDetailFragment.setArguments(args);
+        return houseDetailFragment;
     }
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mRestaurant = Parcels.unwrap(getArguments().getParcelable("restaurant"));
+        mHouse = Parcels.unwrap(getArguments().getParcelable("house"));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_restaurant_detail, container, false);
+        View view = inflater.inflate(R.layout.fragment_house_detail, container, false);
         ButterKnife.bind(this, view);
 
 
-        Picasso.get().load(mRestaurant.getImageUrl()).into(mImageLabel);
+        Picasso.get().load(mHouse.getImageUrl()).into(mImageLabel);
         List<String> categories = new ArrayList<>();
 
-        for (Category category : mRestaurant.getCategories()) {
+        for (Category category : mHouse.getCategories()) {
             categories.add(category.getTitle());
 
             mWebsiteLabel.setOnClickListener(this);
@@ -86,11 +85,10 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
             return view;
         }
 
-        mNameLabel.setText(mRestaurant.getName());
+        mNameLabel.setText(mHouse.getName());
         mCategoriesLabel.setText(android.text.TextUtils.join(", ", categories));
-        mRatingLabel.setText(Double.toString(mRestaurant.getRating()) + "/5");
-        mPhoneLabel.setText(mRestaurant.getPhone());
-        mAddressLabel.setText(mRestaurant.getLocation().toString());
+        mPhoneLabel.setText(mHouse.getPhone());
+        mAddressLabel.setText(mHouse.getLocation().toString());
 
         return view;
     }
@@ -99,19 +97,19 @@ public class RestaurantDetailFragment extends Fragment implements View.OnClickLi
     public void onClick(View v) {
         if (v == mWebsiteLabel) {
             Intent webIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse(mRestaurant.getUrl()));
+                    Uri.parse(mHouse.getUrl()));
             startActivity(webIntent);
         }
         if (v == mPhoneLabel) {
             Intent phoneIntent = new Intent(Intent.ACTION_DIAL,
-                    Uri.parse("tel:" + mRestaurant.getPhone()));
+                    Uri.parse("tel:" + mHouse.getPhone()));
             startActivity(phoneIntent);
         }
         if (v == mAddressLabel) {
             Intent mapIntent = new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("geo:" + mRestaurant.getCoordinates().getLatitude()
-                            + "," + mRestaurant.getCoordinates().getLongitude()
-                            + "?q=(" + mRestaurant.getName() + ")"));
+                    Uri.parse("geo:" + mHouse.getCoordinates().getLatitude()
+                            + "," + mHouse.getCoordinates().getLongitude()
+                            + "?q=(" + mHouse.getName() + ")"));
             startActivity(mapIntent);
         }
 

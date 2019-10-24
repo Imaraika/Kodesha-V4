@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RestaurantDetailFragment">
+    tools:context=".HouseDetailFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:id="@+id/restaurantImageView"
+            android:id="@+id/houseImageView"
             android:src="@drawable/kodeshapngpic"
             android:scaleType="centerCrop" />
 
@@ -32,30 +32,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="House Name"
-                android:id="@+id/restaurantNameTextView"
+                android:id="@+id/houseNameTextView"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:textSize="20sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:id="@+id/ratingTextView"
-                android:layout_alignTop="@+id/restaurantNameTextView"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:textColor="@color/colorAccent"
-                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Brunch, American"
-                android:id="@+id/cuisineTextView"
-                android:layout_below="@+id/restaurantNameTextView"
+                android:id="@+id/categTextView"
+                android:layout_below="@+id/houseNameTextView"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:textColor="@color/colorSecondaryText"
@@ -122,8 +112,8 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Save Restaurant"
-                android:id="@+id/saveRestaurantButton"
+                android:text="Save House"
+                android:id="@+id/savehouseButton"
                 android:layout_alignParentBottom="true"
                 android:background="@color/colorAccent"
                 android:textColor="@color/colorTextIcons"
