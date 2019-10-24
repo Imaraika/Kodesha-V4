@@ -23,10 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentManager fm = getFragmentManager();
-        MoodDialogFragment moodDialogFragment = new MoodDialogFragment ();
-        moodDialogFragment.show(fm, "Sample Fragment");
-
         // butterknife for our BindViews
         ButterKnife.bind(this);
 

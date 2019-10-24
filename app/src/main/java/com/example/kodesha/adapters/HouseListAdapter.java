@@ -25,19 +25,13 @@ import butterknife.ButterKnife;
 
 public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.HouseViewHolder>  {
 
-
-//    private ArrayList<Restaurant> mRestaurants = new ArrayList<>();
-//    private Context mContext;
-
     private List<Business> mHouses;
     private Context mContext;
     private String[] house;
-//    private Target mHouseImageView;
 
     public HouseListAdapter(Context context, List<Business> houses) {
         mContext = context;
         mHouses = houses;
-//        house = house;
     }
 
 
@@ -90,12 +84,7 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
 
     @Override
     public void onBindViewHolder(@NonNull HouseViewHolder holder, int position) {
-//        Picasso.get().load(house[position]).into(mHouseImageView);
         holder.bindHouse(mHouses.get(position));
-
-
-//        Picasso.get().load(house.getImageUrl()).into(mHouseImageView);
-
 
     }
 

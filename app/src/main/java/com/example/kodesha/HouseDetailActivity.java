@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.kodesha.adapters.HousePagerAdapter;
 import com.example.kodesha.models.Business;
@@ -33,5 +34,19 @@ public class HouseDetailActivity extends AppCompatActivity {
         adapterViewPager = new HousePagerAdapter(getSupportFragmentManager(),mHouse);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);
+    }
+    //getting back to listview
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
