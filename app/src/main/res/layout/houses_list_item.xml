@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/restaurantNameTextView"
+            android:id="@+id/houseNameTextView"
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="Houses Location "
@@ -32,23 +32,25 @@
             android:layout_height="wrap_content"
             android:text="The category"
             android:id="@+id/categoryTextView"
-            android:layout_below="@+id/restaurantNameTextView"
+            android:layout_below="@+id/houseNameTextView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:textStyle="italic"/>
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="268dp"
+            android:layout_height="40dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="price"
                 android:id="@+id/price"
+                android:layout_width="128dp"
+                android:layout_height="29dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:textColor="@color/colorAccent"/>
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="price"
+                android:textColor="@color/colorAccent" />
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

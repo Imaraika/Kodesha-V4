@@ -36,15 +36,10 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
 
 
     public class HouseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.houseImageView)
-        ImageView mHouseImageView;
-        @BindView(R.id.restaurantNameTextView)
-        TextView mNameTextView;
-        @BindView(R.id.categoryTextView)
-        TextView mCategoryTextView;
-        @BindView(R.id.price)
-        TextView mRatingTextView;
-
+        @BindView(R.id.houseImageView) ImageView mHouseImageView;
+        @BindView(R.id.houseNameTextView) TextView mNameTextView;
+        @BindView(R.id.categoryTextView) TextView mCategoryTextView;
+        @BindView(R.id.price) TextView mPrice;
         private Context mContext;
 
         public HouseViewHolder(View itemView) {
@@ -60,7 +55,7 @@ public class HouseListAdapter extends RecyclerView.Adapter<HouseListAdapter.Hous
 
             mNameTextView.setText(house.getName());
             mCategoryTextView.setText(house.getCategories().get(0).getTitle());
-            mRatingTextView.setText("Rating: " + house.getRating() + "/5");
+            mPrice.setText(house.getPhone());
         }
 
 
