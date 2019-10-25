@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "175177123793",
+    "firebase_url": "https://kodesha.firebaseio.com",
+    "project_id": "kodesha",
+    "storage_bucket": "kodesha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:175177123793:android:4ff58462b848bc6b17c2f0",
+        "android_client_info": {
+          "package_name": "com.example.kodesha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "175177123793-dnj5rrh6crj4puqvb0d52vos9ccl4ljq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kodesha",
+            "certificate_hash": "f0341320a2b5f0bb19ee84f010f5d98b44c1d9c2"
+          }
+        },
+        {
+          "client_id": "175177123793-d726dmot3kl2begtvpro5ttvep3naldf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5fuhg8bag0sOjMvSuQKQGnU1rHnYk8dA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "175177123793-d726dmot3kl2begtvpro5ttvep3naldf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
