@@ -13,14 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HouseDetailActivity"></activity>
-        <activity android:name=".Houses" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.CreateAccountActivity" />
+        <activity android:name=".SavedHouseListActivity" />
+        <activity android:name=".HouseDetailActivity" />
+        <activity android:name=".Houses" />
+        <activity android:name=".MainActivity">
+
         </activity>
 
         <meta-data

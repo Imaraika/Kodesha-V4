@@ -12,9 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.kodesha.models.Business;
 import com.example.kodesha.models.Category;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
@@ -74,6 +77,7 @@ public class HouseDetailFragment extends Fragment  implements View.OnClickListen
 
 
         Picasso.get().load(mHouse.getImageUrl()).into(mImageLabel);
+
         List<String> categories = new ArrayList<>();
 
         for (Category category : mHouse.getCategories()) {
@@ -82,6 +86,9 @@ public class HouseDetailFragment extends Fragment  implements View.OnClickListen
             mWebsiteLabel.setOnClickListener(this);
             mPhoneLabel.setOnClickListener(this);
             mAddressLabel.setOnClickListener(this);
+
+            mSavehouseButton.setOnClickListener(this);
+
             return view;
         }
 
@@ -111,6 +118,13 @@ public class HouseDetailFragment extends Fragment  implements View.OnClickListen
                             + "," + mHouse.getCoordinates().getLongitude()
                             + "?q=(" + mHouse.getName() + ")"));
             startActivity(mapIntent);
+        }
+        if (v == mSavehouseButton) {
+            DatabaseReference houseRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference(Constants.FIREBASE_CHILD_HOUSES);
+            houseRef.push().setValue(mHouse);
+            Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
         }
 
     }

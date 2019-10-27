@@ -6,4 +6,9 @@
     <color name="white">#FCFCFC</color>
     <color name="colorSecondaryText">#FF5722</color>
     <color name="colorTextIcons">#000000</color>
+    <color name="colorPrimaryLight">#5F5D5D</color>
+    <color name="colorDivider">#42A5F5</color>
+
+
+
 </resources>
