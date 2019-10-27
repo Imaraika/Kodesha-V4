@@ -14,17 +14,18 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
 
+        android:layout_marginTop="-5dp"
         android:scaleType="centerCrop"
         android:src="@drawable/backorg" />
 
     <EditText
         android:id="@+id/locationEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
+        android:layout_width="394dp"
+        android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="284dp"
         android:ems="10"
@@ -32,31 +33,30 @@
         android:inputType="textPersonName" />
 
     <Button
+        android:id="@+id/savedHousesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Saved Restaurants"
-        android:id="@+id/savedHousesButton"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorTextIcons"
-        android:visibility="visible"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="29dp"
+        android:background="@color/colorAccent"
+        android:text="My Saved Restaurants"
+        android:textColor="@color/colorTextIcons"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/buttonfindhouse"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/savedHousesButton"
+        android:layout_width="210dp"
+        android:layout_height="75dp"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-
-        android:layout_marginStart="218dp"
-        android:layout_marginLeft="218dp"
-        android:layout_marginTop="103dp"
-        android:layout_marginBottom="518dp"
-        android:text="search"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:text="find house"
         android:textColor="@color/white" />
 
 
