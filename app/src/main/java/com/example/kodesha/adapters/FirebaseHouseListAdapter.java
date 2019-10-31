@@ -9,19 +9,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 
 import com.example.kodesha.R;
+import com.example.kodesha.SavedHouseListActivity;
 import com.example.kodesha.util.ItemTouchHelperAdapter;
 import com.example.kodesha.models.Business;
 import com.example.kodesha.util.OnStartDragListener;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Query;
 
 public class FirebaseHouseListAdapter extends FirebaseRecyclerAdapter<Business, FirebaseHouseViewHolder> implements ItemTouchHelperAdapter {
     private DatabaseReference mRef;
     private OnStartDragListener mOnStartDragListener;
     private Context mContext;
 
-    public FirebaseHouseListAdapter(FirebaseRecyclerOptions<Business> options){
+    public FirebaseHouseListAdapter(FirebaseRecyclerOptions<Business> options, Query query, SavedHouseListActivity savedHouseListActivity, SavedHouseListActivity houseListActivity){
         super(options);
 //        mRef = ref.getRef();
 //        mOnStartDragListener = onStartDragListener;
