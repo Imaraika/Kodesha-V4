@@ -31,7 +31,7 @@
       - install emulator for you to run application or you can use USB to run it to your phone 
       - then to get all source code locally these are some git command you may use
    $ cd ../git init 
-   $ git clone https://github.com/Imaraika/Kodesha-V3.git
+   $ git clone https://github.com/Imaraika/Kodesha-V4.git
    
 ## BDD
 ### Behavior
