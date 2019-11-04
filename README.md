@@ -1,7 +1,7 @@
-## Kodesha-V3
+## Kodesha-V4
 ## By Ange Ingabire
 ## Description 
-   this is an a continued Android Application of Last week where i have connected my APP to firebase so that i can save and retrieve data from firebase.
+   this is an a continued Android Application of Last week where i have connected my APP to firebase so that i can save and retrieve data from firebase and i havwe added animation and gestueres to fullfil the IP objectives of this week.
    
 ## Table of contents
 * [General info](#generalinfo)
