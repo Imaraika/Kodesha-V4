@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,6 +48,9 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
+        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.slide);
+        mPasswordLoginButton.startAnimation(animation1);
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
 
@@ -73,6 +78,11 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         mAuthProgressDialog.setTitle("Loading...");
         mAuthProgressDialog.setMessage("Authenticating with Firebase...");
         mAuthProgressDialog.setCancelable(false);
+    }
+
+    public void blick(View view){
+
+
     }
 
     @Override
