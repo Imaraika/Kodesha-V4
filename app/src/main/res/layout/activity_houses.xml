@@ -6,23 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Houses">
 
-    <TextView
-        android:id="@+id/display_Location_TextView"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="20dp"
-        android:textAlignment="center"
-        android:text="TextView" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/display_Location_TextView"
         android:layout_marginTop="16dp"
         android:visibility="gone" />
 

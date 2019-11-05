@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -52,6 +54,10 @@ public class Houses extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_houses);
         ButterKnife.bind(this);
+
+        Animation animation5 = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.myanimation);
+        mRecyclerView.startAnimation(animation5);
 
 
         Intent intent = getIntent();

@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         setContentView(R.layout.activity_login);
 
         ButterKnife.bind(this);
+
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.fade);
         mPasswordLoginButton.startAnimation(animation1);
