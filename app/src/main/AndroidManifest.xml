@@ -24,6 +24,7 @@
         <activity android:name=".SavedHouseListActivity" />
         <activity android:name=".HouseDetailActivity" />
         <activity android:name=".Houses" />
+        <activity android:name=".ui.ShowUsers"/>
         <activity android:name=".MainActivity">
 
         </activity>

@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 
         ButterKnife.bind(this);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
-                R.anim.slide);
+                R.anim.fade);
         mPasswordLoginButton.startAnimation(animation1);
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
