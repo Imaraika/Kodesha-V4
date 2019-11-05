@@ -1,7 +1,7 @@
-## Kodesha-V3
+## Kodesha-V4
 ## By Ange Ingabire
 ## Description 
-   this is an a continued Android Application of Last week where i have connected my APP to firebase so that i can save and retrieve data from firebase.
+   this is an a continued Android Application of Last week where i have connected my APP to firebase so that i can save and retrieve data from firebase and i havwe added animation and gestueres to fullfil the IP objectives of this week.
    
 ## Table of contents
 * [General info](#generalinfo)
@@ -31,7 +31,7 @@
       - install emulator for you to run application or you can use USB to run it to your phone 
       - then to get all source code locally these are some git command you may use
    $ cd ../git init 
-   $ git clone https://github.com/Imaraika/Kodesha-V3.git
+   $ git clone https://github.com/Imaraika/Kodesha-V4.git
    
 ## BDD
 ### Behavior
